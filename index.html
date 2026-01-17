@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АКВА Инжиниринг | Устройство заездов, дренажа, монтаж ЛОС, заборов, подключение к водопроводу</title>
+    <meta name="description" content="Профессиональные строительные услуги: подключение к водопроводу, устройство заездов, дренажных систем, монтаж локальных очистных сооружений, установка заборов и ограждений.">
+    <meta name="keywords" content="строительство, заезды, дренаж, ЛОС, заборы, ограждения, строительные услуги, септики, биостанции, ливневка, ворота">
+
+<!--    <link rel="icon" href="favicon.ico"> &lt;!&ndash; 32×32 &ndash;&gt;-->
+    <link rel="icon" href="raw-assets/favicon.svg" type="image/svg+xml">
+<!--    <link rel="apple-touch-icon" href="images/favicons/apple.png">  &lt;!&ndash; 180×180 &ndash;&gt;-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.thumbs.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;subset=latin,cyrillic" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#074ea2",
+                        secondary: "#0095da",
+                        accent: "#8dd8f8",
+                        dark: "#1f2937",
+                        light: "#f9fafb"
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'Arial', 'sans-serif']
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem'
+                    }
+                },
+                container: {
+                    screens: {
+                        sm: '600px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1240px',
+                        '2xl': '1240px',
+                    },
+                },
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --color-primary: #074ea2;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(45deg, rgb(0 28 62 / 90%) 0%, rgb(0 28 62 / 80%) 50%, rgba(0, 149, 218, 0.6) 100%);
+        }
+
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #074ea2 0%, #0095da 100%);
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            height: 100dvh;
+            background-color: white;
+            z-index: 100;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        /* Section dividers */
+        .section-divider {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .divider-top {
+            top: -60px;
+        }
+
+        .divider-bottom {
+            bottom: -60px;
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 640px) {
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .section-divider {
+                height: 30px;
+            }
+
+            .divider-top {
+                top: -30px;
+            }
+
+            .divider-bottom {
+                bottom: -30px;
+            }
+        }
+
+        /* Advantages block styling */
+        .advantage-card {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .advantage-card:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%) translateY(20px);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .advantage-card:hover:after,
+        .advantage-card.is-active:after{
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .advantage-card:hover i,
+        .advantage-card.is-active i {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .advantage-card:nth-child(-n+3) {
+                padding-bottom: 10px;
+            }
+
+            .advantage-card:nth-child(-n+3):after {
+                visibility: hidden;
+            }
+        }
+
+        /* Hero section height fix */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        /* Menu link */
+        .menu-link {
+            position: relative;
+        }
+
+        /* Line */
+        .menu-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: var(--color-primary);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Triangle */
+        .menu-link::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid var(--color-primary);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* hover */
+        .menu-link:hover {
+            color: var(--color-primary);
+        }
+
+        .menu-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .menu-link:hover::before {
+            bottom: 4px;
+            opacity: 1;
+        }
+
+        .f-carousel {
+            --f-arrow-pos: 10px;
+
+            --f-arrow-width: 32px;
+            --f-arrow-height: 32px;
+
+            --f-arrow-svg-width: 16px;
+            --f-arrow-svg-height: 16px;
+            --f-arrow-svg-stroke-width: 2.5;
+
+            --f-arrow-color: #fff;
+            --f-arrow-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0
+            0 / 30%);
+
+            --f-arrow-border-radius: 50%;
+            --f-arrow-bg: var(--color-primary);
+            --f-arrow-hover-bg: #0095da;
+            --f-arrow-active-bg: #f0f0f0;
+        }
+
+        .f-carousel__slide {
+            width: 100%;
+        }
+
+        /*@media (min-width: 768px) {*/
+        /*    .f-carousel__slide {*/
+        /*        width: calc(100% / 3);*/
+        /*    }*/
+        /*}*/
+
+        .service-feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-feature-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background-color: #074ea2;
+        }
+
+        .section-divider-top,
+        .section-divider-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        .section-divider-top {
+            top: 0;
+        }
+
+        .section-divider-bottom {
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .section-divider-top svg,
+        .section-divider-bottom svg {
+            width: 400px;
+        }
+
+        .section-divider-top svg {
+            transform: rotate(180deg);
+        }
+
+        .service-background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-montserrat">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="px-6 pb-6 flex-1">
+            <div class="flex justify-end items-center my-3">
+                <button id="close-mobile-menu" class="text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <nav class="">
+                <a href="#services" class="block py-3 text-dark hover:text-primary font-medium border-b border-gray-100">Услуги</a>
+                <a href="#process" class="block py-3 text-dark hover:text-primary font-medium border-b border-gray-100">Как мы работаем</a>
+                <a href="#gallery" class="block py-3 text-dark hover:text-primary font-medium border-b border-gray-100">Проекты</a>
+                <a href="#contacts" class="block py-3 text-dark hover:text-primary font-medium border-b border-gray-100">Контакты</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Footer with Contacts -->
+        <div class="p-6 bg-gray-50 border-t border-gray-200">
+            <div class="mb-4">
+                <h3 class="text-sm font-semibold text-dark mb-3">Свяжитесь с нами:</h3>
+                <a href="tel:+78122182277" class="block text-lg font-bold text-primary mb-2">
+                    <i class="fas fa-phone-alt mr-2"></i>+7 812 218-22-77
+                </a>
+            </div>
+
+            <div class="flex space-x-4">
+                <a href="https://wa.me/89390103102" class="text-green-500" target="_blank">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                </a>
+                <a href="https://t.me/aquaengspb" class="text-blue-400" target="_blank">
+                    <i class="fab fa-telegram text-4xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 h-12 md:h-16 lg:h-20 bg-white shadow-md">
+        <div class="container mx-auto px-4 h-full">
+            <nav class="flex justify-between items-center h-full">
+                <div class="w-40 md:w-52 lg:w-60">
+                    <a href="#hero">
+                        <img src="raw-assets/logo.svg" alt="Аква Инжиниринг">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-3 lg:space-x-8 h-full mx-2">
+                    <a href="#services" class="menu-link flex items-center text-dark hover:text-primary font-medium transition-colors duration-300 text-sm lg:text-base">Услуги</a>
+                    <a href="#process" class="menu-link flex items-center text-dark hover:text-primary font-medium transition-colors duration-300 text-sm lg:text-base">Как мы работаем</a>
+                    <a href="#gallery" class="menu-link flex items-center text-dark hover:text-primary font-medium transition-colors duration-300 text-sm lg:text-base">Проекты</a>
+                    <a href="#contacts" class="menu-link flex items-center text-dark hover:text-primary font-medium transition-colors duration-300 text-sm lg:text-base">Контакты</a>
+                </div>
+
+                <a href="tel:+78122182277" class="hidden md:flex text-primary hover:text-secondary font-semibold transition-colors duration-300 text-lg lg:text-xl">
+                    +7 812 218-22-77
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - Full Screen -->
+    <section id="hero" class="hero-section min-h-[calc(100dvh-48px)] md:min-h-[calc(100dvh-64px)] lg:min-h-[calc(100dvh-80px)]">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="raw-assets/bg.jpg"
+                alt="Строительная техника на объекте"
+                class="w-full h-full object-cover"
+                loading="eager"
+            >
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto grow px-4 relative z-10 pt-8 pb-16 flex flex-col justify-between">
+            <div></div>
+
+            <div class="max-w-2xl">
+                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white uppercase leading-tight md:leading-tight lg:leading-tight">
+                    Профессиональные строительные и&nbsp;инженерные работы
+                </h2>
+                <p class="text-lg md:text-xl text-white my-6 md:my-8">
+                    Комплексные решения для загородного строительства в&nbsp;Ленинградской области. Работаем во&nbsp;Всеволожске и&nbsp;прилегающих районах с&nbsp;гарантией качества и&nbsp;соблюдением сроков.
+                </p>
+                <div class="flex flex-wrap gap-3 md:gap-6">
+<!--                    <a href="#contacts" class="bg-white text-primary font-bold px-8 py-4 md:px-12 md:py-6 hover:bg-gray-200 transition duration-300 text-sm md:text-base flex items-center">-->
+<!--                        Связаться с нами-->
+<!--                    </a>-->
+                    <a href="#services" class="bg-secondary text-white font-bold px-8 py-4 md:px-16 md:py-5 hover:bg-primary transition duration-300 text-sm md:text-base flex items-center">
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-12">
+                <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">150+</div>
+                    <div class="text-white text-sm md:text-base">Выполненных проектов</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">5 лет</div>
+                    <div class="text-white text-sm md:text-base">Опыта работы</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">3 года</div>
+                    <div class="text-white text-sm md:text-base">Гарантия качества</div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">100%</div>
+                    <div class="text-white text-sm md:text-base">Соблюдение сроков</div>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <a href="#services" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="pt-12 md:pt-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div>
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-3 md:mb-4">Наши услуги</h2>
+                <p class="text-gray-600 max-w-2xl text-sm md:text-base">Предоставляем полный комплекс строительных услуг с гарантией качества и соблюдением сроков</p>
+            </div>
+
+            <!-- Service 1: Устройство заездов -->
+            <div class="py-14 md:py-20 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div class="order-last lg:order-first">
+                        <div id="carousel-service-1" class="f-carousel w-full h-64 md:h-80">
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/driveway.jpg" data-thumb-src="raw-assets/entryway/driveway.jpg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/driveway.jpg" alt="Устройство бетонного заезда">
+                                </div>
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%201.jpeg" data-thumb-src="raw-assets/entryway/заезд%201.jpeg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/заезд%201.jpeg" alt="Устройство бетонного заезда">
+                                </div>
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%202.jpg" data-thumb-src="raw-assets/entryway/заезд%202.jpg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/заезд%202.jpg" alt="Устройство бетонного заезда">
+                                </div>
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%203.jpeg" data-thumb-src="raw-assets/entryway/заезд%203.jpeg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/заезд%203.jpeg" alt="Устройство бетонного заезда">
+                                </div>
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%204.jpg" data-thumb-src="raw-assets/entryway/заезд%204.jpg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/заезд%204.jpg" alt="Устройство бетонного заезда">
+                                </div>
+                                <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%205.jpg" data-thumb-src="raw-assets/entryway/заезд%205.jpg" data-fancybox="gallery-1">
+                                    <img data-lazy-src="raw-assets/entryway/заезд%205.jpg" alt="Устройство бетонного заезда">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="relative z-30">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-road text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Устройство заездов</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 text-base md:text-lg">
+                            Профессиональное устройство въездов на территорию с использованием качественных материалов и современных технологий.
+                            Мы предлагаем различные типы покрытий в зависимости от нагрузки и условий эксплуатации.
+                        </p>
+
+                        <div class="p-6 border border-[var(--color-primary)]">
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Что мы предлагаем:</h4>
+                            <ul class="service-feature-list space-y-2">
+                                <li class="text-gray-700">Бетонные заезды с армированием</li>
+                                <li class="text-gray-700">Асфальтовые покрытия</li>
+                                <li class="text-gray-700">Комбинированные решения</li>
+                                <li class="text-gray-700">Установка бордюров и водостоков</li>
+                                <li class="text-gray-700">Подготовка основания и уплотнение грунта</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Устройство дренажа -->
+            <div class="py-14 md:py-20 relative">
+                <div class="service-background bg-light"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div class="order-last">
+                        <div id="carousel-service-2" class="f-carousel w-full h-64 md:h-80">
+                            <div class="f-carousel__slide" data-src="raw-assets/drainages/drainage.jpg" data-thumb-src="raw-assets/drainages/drainage.jpg" data-fancybox="gallery-2">
+                                <img data-lazy-src="raw-assets/drainages/drainage.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/drainages/дренаж%201.jpeg" data-thumb-src="raw-assets/drainages/дренаж%201.jpeg" data-fancybox="gallery-2">
+                                <img data-lazy-src="raw-assets/drainages/дренаж%201.jpeg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/drainages/дренаж%202.jpg" data-thumb-src="raw-assets/drainages/дренаж%202.jpg" data-fancybox="gallery-2">
+                                <img data-lazy-src="raw-assets/drainages/дренаж%202.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/drainages/дренаж%203.jpg" data-thumb-src="raw-assets/drainages/дренаж%203.jpg" data-fancybox="gallery-2">
+                                <img data-lazy-src="raw-assets/drainages/дренаж%203.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-30">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-water text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Устройство дренажа</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 text-base md:text-lg">
+                            Проектирование и монтаж эффективных дренажных систем для отвода грунтовых и поверхностных вод. Решаем проблемы подтопления участков и фундаментов зданий.
+                        </p>
+
+                        <div class="p-6 border border-[var(--color-primary)]">
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Типы дренажных систем:</h4>
+                            <ul class="service-feature-list space-y-2">
+                                <li class="text-gray-700">Поверхностный дренаж</li>
+                                <li class="text-gray-700">Глубинный дренаж</li>
+                                <li class="text-gray-700">Ливневая канализация</li>
+                                <li class="text-gray-700">Дренаж фундамента</li>
+                                <li class="text-gray-700">Дренажные колодцы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Монтаж ЛОС -->
+            <div class="py-14 md:py-20 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div class="order-last lg:order-first">
+                        <div id="carousel-service-3" class="f-carousel w-full h-64 md:h-80">
+                            <div class="f-carousel__slide" data-src="raw-assets/ISTS/los.png" data-thumb-src="raw-assets/ISTS/los.png" data-fancybox="gallery-3">
+                                <img data-lazy-src="raw-assets/ISTS/los.png" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/ISTS/лос%201.jpg" data-thumb-src="raw-assets/ISTS/лос%201.jpg" data-fancybox="gallery-3">
+                                <img data-lazy-src="raw-assets/ISTS/лос%201.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/ISTS/лос%202.mp4" data-thumb-src="raw-assets/ISTS/лос%202.png" data-fancybox="gallery-3">
+                                <img data-lazy-src="raw-assets/ISTS/лос%202.png" alt="Устройство бетонного заезда">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-30">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-recycle text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Монтаж ЛОС</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 text-base md:text-lg">
+                            Установка локальных очистных сооружений для частных домов и коммерческих объектов.
+                            Мы работаем с различными типами систем очистки сточных вод.
+                        </p>
+
+                        <div class="p-6 border border-[var(--color-primary)]">
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Что мы предлагаем:</h4>
+                            <ul class="service-feature-list space-y-2">
+                                <li class="text-gray-700">Септики</li>
+                                <li class="text-gray-700">Накопительные и переливные системы</li>
+                                <li class="text-gray-700">Станции биологической очистки</li>
+                                <li class="text-gray-700">Системы доочистки</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Заборы ограждения -->
+            <div class="py-14 md:py-20 relative">
+                <div class="service-background bg-light"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div class="order-last">
+                        <div id="carousel-service-4" class="f-carousel w-full h-64 md:h-80">
+                            <div class="f-carousel__slide" data-src="raw-assets/fences/fence.jpg" data-thumb-src="raw-assets/fences/fence.jpg" data-fancybox="gallery-1">
+                                <img data-lazy-src="raw-assets/fences/fence.jpg" alt="Устройство бетонного забора">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/fences/забор%201.jpg" data-thumb-src="raw-assets/fences/забор%201.jpg" data-fancybox="gallery-1">
+                                <img data-lazy-src="raw-assets/fences/забор%201.jpg" alt="Устройство бетонного забора">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/fences/забор%202.jpg" data-thumb-src="raw-assets/fences/забор%202.jpg" data-fancybox="gallery-1">
+                                <img data-lazy-src="raw-assets/fences/забор%202.jpg" alt="Устройство бетонного забора">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/fences/забор%203.jpg" data-thumb-src="raw-assets/fences/забор%203.jpg" data-fancybox="gallery-1">
+                                <img data-lazy-src="raw-assets/fences/забор%203.jpg" alt="Устройство бетонного забора">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/fences/забор%204.jpg" data-thumb-src="raw-assets/fences/забор%204.jpg" data-fancybox="gallery-1">
+                                <img data-lazy-src="raw-assets/fences/забор%204.jpg" alt="Устройство бетонного забора">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-30">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                <i class="fas fa-newspaper text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Заборы и ограждения</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 text-base md:text-lg">
+                            Изготовление и установка различных типов ограждений: металлических, деревянных, бетонных, комбинированных.
+                            Проектирование и монтаж под ключ с гарантией качества.
+                        </p>
+
+                        <div class="p-6 border border-[var(--color-primary)]">
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Материалы:</h4>
+                            <ul class="service-feature-list space-y-2">
+                                <li class="text-gray-700">Металлические</li>
+                                <li class="text-gray-700">Деревянные</li>
+                                <li class="text-gray-700">Бетонные</li>
+                                <li class="text-gray-700">Комбинированные</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-12 md:py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="mb-8 md:mb-12">
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-3 md:mb-4">Как мы работаем</h2>
+                <p class="text-gray-600 max-w-2xl text-sm md:text-base">Четкий и прозрачный процесс работы от консультации до сдачи объекта</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+                <!-- Step 1 -->
+                <div class="relative p-5 md:p-6 border border-[var(--color-primary)]">
+                    <div class="step-number mb-4">01</div>
+                    <h3 class="text-lg md:text-xl font-bold text-dark mb-3">Консультация</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Обсуждение проекта, выезд на объект, оценка объема работ и особенностей участка. Бесплатный замер и консультация специалиста.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative p-5 md:p-6 border border-[var(--color-primary)]">
+                    <div class="step-number mb-4">02</div>
+                    <h3 class="text-lg md:text-xl font-bold text-dark mb-3">Проектирование</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Разработка технического решения, составление сметы и согласование с заказчиком. Подбор материалов и оборудования.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative p-5 md:p-6 border border-[var(--color-primary)]">
+                    <div class="step-number mb-4">03</div>
+                    <h3 class="text-lg md:text-xl font-bold text-dark mb-3">Выполнение работ</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Мобилизация техники и материалов, выполнение работ с контролем качества на каждом этапе. Фотоотчеты для клиента.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative p-5 md:p-6 border border-[var(--color-primary)]">
+                    <div class="step-number mb-4">04</div>
+                    <h3 class="text-lg md:text-xl font-bold text-dark mb-3">Сдача объекта</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Приемка работ, оформление документов, гарантийные обязательства. Консультация по эксплуатации и обслуживанию.</p>
+                </div>
+            </div>
+
+            <!-- Process Visual -->
+            <div class="mt-8 md:mt-12 bg-white shadow-lg p-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <h3 class="text-xl md:text-2xl font-bold text-dark mb-2">Готовы начать работу?</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Оставьте заявку и получите бесплатную консультацию специалиста</p>
+                    </div>
+                    <a href="#contacts" class="bg-primary text-white font-bold px-6 py-3 hover:bg-blue-800 transition duration-300 text-sm md:text-base flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i>Записаться на замер
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-12 md:py-16 bg-white relative">
+        <div class="section-divider-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 517 88" fill="none">
+                <path d="M361.5 0L0 88H517L361.5 0Z" fill="#FCFCFC"></path>
+            </svg>
+        </div>
+        <div class="section-divider-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 517 88" fill="none">
+                <path d="M361.5 0L0 88H517L361.5 0Z" fill="#FCFCFC"></path>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4">
+            <div class="mb-8 md:mb-12">
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-3 md:mb-4">Наши преимущества</h2>
+                <p class="text-gray-600 max-w-2xl text-sm md:text-base">Почему выбирают нас для выполнения строительных работ</p>
+            </div>
+
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-6">
+                <div id="advantage-card-1" class="text-center pb-12 advantage-card is-active">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-award text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Гарантия качества</h3>
+                </div>
+
+                <div id="advantage-card-2" class="text-center pb-12 advantage-card">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-calendar-check text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Соблюдение сроков</h3>
+                </div>
+
+                <div id="advantage-card-3" class="text-center pb-12 advantage-card">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-hard-hat text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Опытные специалисты</h3>
+                </div>
+
+                <div id="advantage-card-4" class="text-center pb-12 advantage-card">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-tools text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Современное оборудование</h3>
+                </div>
+
+                <div id="advantage-card-5" class="text-center pb-12 advantage-card">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-file-contract text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Прозрачная смета</h3>
+                </div>
+
+                <div id="advantage-card-6" class="text-center pb-12 advantage-card">
+                    <div class="mb-5 md:mb-6">
+                        <i class="fas fa-images text-gray-500 text-5xl md:text-6xl"></i>
+                    </div>
+                    <h3 class="text-sm lg:text-base font-medium">Фотоотчёт работ</h3>
+                </div>
+            </div>
+
+            <div id="advantage-description-1" class="relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Гарантия качества</h3>
+                <p class="text-gray-600 text-sm md:text-base">Мы предоставляем расширенную гарантию на все виды выполненных работ. Используем только проверенные материалы и строго соблюдаем технологии монтажа. В случае выявления дефектов по нашей вине оперативно устраняем их за свой счёт без дополнительных расходов для клиента.</p>
+            </div>
+
+            <div id="advantage-description-2" class="hidden relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Соблюдение сроков</h3>
+                <p class="text-gray-600 text-sm md:text-base">Мы строго придерживаемся согласованных сроков выполнения работ. Все этапы фиксируются в договоре, включая дату начала и завершения. В документе также предусмотрены штрафные санкции за срыв сроков, что дополнительно защищает интересы клиента и гарантирует нашу ответственность.</p>
+            </div>
+
+            <div id="advantage-description-3" class="hidden relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Опытные специалисты</h3>
+                <p class="text-gray-600 text-sm md:text-base">Все работы выполняют квалифицированные специалисты с опытом не менее 5 лет в сфере загородного строительства и инженерных систем. Сотрудники регулярно проходят обучение, повышают квалификацию и работают по внутренним стандартам качества, что позволяет добиваться стабильного и прогнозируемого результата.</p>
+            </div>
+
+            <div id="advantage-description-4" class="hidden relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Современное оборудование</h3>
+                <p class="text-gray-600 text-sm md:text-base">В работе мы используем современное профессиональное оборудование и качественные материалы от надёжных поставщиков. Наличие собственного парка техники позволяет не зависеть от подрядчиков, оптимизировать сроки и обеспечивать высокое качество выполнения работ на каждом этапе проекта.</p>
+            </div>
+
+            <div id="advantage-description-5" class="hidden relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Прозрачная смета</h3>
+                <p class="text-gray-600 text-sm md:text-base">Мы составляем детализированную и понятную смету без скрытых платежей и неожиданных доплат. Все виды работ, объёмы и используемые материалы заранее согласовываются с клиентом. Итоговая стоимость фиксируется до начала работ и не меняется в процессе их выполнения.</p>
+            </div>
+
+            <div id="advantage-description-6" class="hidden relative border border-[var(--color-primary)] p-12 bg-white z-30">
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Фотоотчёт работ</h3>
+                <p class="text-gray-600 text-sm md:text-base">На всех этапах выполнения работ мы предоставляем регулярные фотоотчёты. Клиент может в режиме реального времени отслеживать прогресс через мессенджеры и быть уверенным, что работы выполняются в соответствии с проектом, договорённостями и установленным графиком.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Useful Information Section -->
+    <section id="info" class="py-12 md:py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="mb-8 md:mb-12">
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-3 md:mb-4">Информация для клиентов</h2>
+                <p class="text-gray-600 max-w-2xl text-sm md:text-base">Ответы на часто задаваемые вопросы и полезные советы</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- FAQ -->
+                <div class="bg-white shadow-lg p-5 md:p-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-dark mb-4 md:mb-6">Часто задаваемые вопросы</h3>
+
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 pb-4">
+                            <h4 class="text-base md:text-lg font-semibold text-dark mb-2">Какой срок выполнения работ?</h4>
+                            <p class="text-gray-600 text-sm md:text-base">Сроки зависят от объема и сложности работ. В среднем: заезды - 3-7 дней, дренаж - 5-10 дней, ЛОС - 7-14 дней, заборы - 4-12 дней.</p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h4 class="text-base md:text-lg font-semibold text-dark mb-2">Нужно ли получать разрешение на работы?</h4>
+                            <p class="text-gray-600 text-sm md:text-base">Для большинства работ разрешение не требуется. Исключение - работы в охранных зонах и на особо охраняемых территориях.</p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h4 class="text-base md:text-lg font-semibold text-dark mb-2">Какие гарантии вы предоставляете?</h4>
+                            <p class="text-gray-600 text-sm md:text-base">Предоставляем гарантию на работы от 1 до 3 лет в зависимости от типа работ. Все гарантийные обязательства фиксируем в договоре.</p>
+                        </div>
+
+                        <div class="pb-4">
+                            <h4 class="text-base md:text-lg font-semibold text-dark mb-2">Можно ли выполнить работы зимой?</h4>
+                            <p class="text-gray-600 text-sm md:text-base">Да, большинство работ можно выполнять круглый год. Для зимних работ используем специальные технологии и материалы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="bg-white shadow-lg p-5 md:p-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-dark mb-4 md:mb-6">Полезные советы</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold text-dark mb-1">Планируйте заранее</h4>
+                                <p class="text-gray-600 text-sm md:text-base">Лучшее время для строительных работ - весна и лето. Заблаговременное планирование позволяет получить скидки на материалы.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-clipboard-check text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold text-dark mb-1">Проверяйте документы</h4>
+                                <p class="text-gray-600 text-sm md:text-base">Всегда заключайте договор и проверяйте наличие гарантийных обязательств. Сохраняйте акты выполненных работ.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-tree text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold text-dark mb-1">Учитывайте ландшафт</h4>
+                                <p class="text-gray-600 text-sm md:text-base">При планировании дренажа и заездов учитывайте рельеф местности и расположение деревьев для оптимального результата.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold text-dark mb-1">Безопасность прежде всего</h4>
+                                <p class="text-gray-600 text-sm md:text-base">Убедитесь, что подрядчик имеет страховку и соблюдает технику безопасности на объекте.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 md:py-16 bg-white relative">
+        <div class="section-divider-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 517 88" fill="none">
+                <path d="M361.5 0L0 88H517L361.5 0Z" fill="#074ea2"></path>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-30">
+            <div class="mb-8 md:mb-12">
+                <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-3 md:mb-4">Галерея выполненных работ</h2>
+                <p class="text-gray-600 max-w-2xl text-sm md:text-base">Реальные примеры наших строительных проектов</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                <a href="raw-assets/entryway/заезд%201.jpeg" data-fancybox="gallery" data-caption="Завершенный проект заезда">
+                    <img src="raw-assets/entryway/заезд%201.jpeg" alt="Завершенный проект заезда" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/entryway/заезд%202.jpg" data-fancybox="gallery" data-caption="Дренажная система в действии">
+                    <img src="raw-assets/entryway/заезд%202.jpg" alt="Дренажная система в действии" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/entryway/заезд%203.jpeg" data-fancybox="gallery" data-caption="Монтаж ЛОС системы">
+                    <img src="raw-assets/entryway/заезд%203.jpeg" alt="Монтаж ЛОС системы" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/entryway/заезд%204.jpg" data-fancybox="gallery" data-caption="Установленный металлический забор">
+                    <img src="raw-assets/entryway/заезд%204.jpg" alt="Установленный металлический забор" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/entryway/заезд%205.jpg" data-fancybox="gallery" data-caption="Бетонный заезд с покрытием">
+                    <img src="raw-assets/entryway/заезд%205.jpg" alt="Бетонный заезд с покрытием" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/drainages/дренаж%201.jpeg" data-fancybox="gallery" data-caption="Дренажные работы на участке">
+                    <img src="raw-assets/drainages/дренаж%201.jpeg" alt="Дренажные работы на участке" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/drainages/дренаж%202.jpg" data-fancybox="gallery" data-caption="Очистные сооружения в сборе">
+                    <img src="raw-assets/drainages/дренаж%202.jpg" alt="Очистные сооружения в сборе" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/drainages/дренаж%203.jpg" data-fancybox="gallery" data-caption="Деревянное ограждение территории">
+                    <img src="raw-assets/drainages/дренаж%203.jpg" alt="Деревянное ограждение территории" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+                <a href="raw-assets/ISTS/лос%201.jpg" data-fancybox="gallery" data-caption="Деревянное ограждение территории">
+                    <img src="raw-assets/ISTS/лос%201.jpg" alt="Деревянное ограждение территории" class="w-full h-40 md:h-48 object-cover gallery-item" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-12 md:py-16 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Наши контакты</h3>
+
+                    <div class="space-y-5 md:space-y-6 border-b border-gray-700 pb-6 md:pb-0 md:border-none">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-phone-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold mb-1">Телефон</h4>
+                                <a href="tel:+78122182277" class="text-gray-100 text-lg md:text-xl">
+                                    +7 812 218-22-77
+                                </a>
+                                <p class="text-gray-400 text-xs md:text-sm mt-1">Ежедневно с 8:00 до 20:00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold mb-1">Электронная почта</h4>
+                                <a href="mailto:aqua-engspb@yandex.ru" class="text-gray-100">
+                                    aqua-engspb@yandex.ru
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold mb-1">WhatsApp</h4>
+                                <a href="https://wa.me/89390103102" class="text-gray-100">
+                                    +7 939 010-31-02
+                                </a>
+                                <p class="text-gray-400 text-xs md:text-sm mt-1">Быстрый ответ в мессенджере</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fab fa-telegram text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold mb-1">Telegram</h4>
+                                <a href="https://t.me/aquaengspb" class="text-gray-100">
+                                    @aquaengspb
+                                </a>
+                                <p class="text-gray-400 text-xs md:text-sm mt-1">Пишите в любое время</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base md:text-lg font-semibold mb-1">Адрес офиса</h4>
+                                <p class="text-gray-100">г. Всеволожск, Всеволожский пр-т, д.17, офис 227</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Hours & Map -->
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Режим работы</h3>
+
+                    <div class="bg-gray-800 pb-5 md:pb-6 mb-6 md:mb-8 border-b border-gray-700">
+                        <div class="space-y-3 md:space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-sm md:text-base">Понедельник - Пятница</span>
+                                <span class="font-semibold text-sm md:text-base">8:00 - 20:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm md:text-base">Суббота</span>
+                                <span class="font-semibold text-sm md:text-base">9:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm md:text-base">Воскресенье</span>
+                                <span class="font-semibold text-sm md:text-base">10:00 - 16:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg md:text-xl font-semibold mb-3 md:mb-4">Как добраться</h4>
+                        <div class="bg-gray-800">
+                            <div style="position:relative;overflow:hidden;">
+                                <a href="https://yandex.ru/maps/10865/vsevolgsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                                    Всеволожск
+                                </a>
+                                <a href="https://yandex.ru/maps/10865/vsevolgsk/house/vsevolozhskiy_prospekt_17/Z0kYcANmTUEPQFhqfXxzcH5jZA==/?ll=30.646605%2C60.021208&utm_medium=mapframe&utm_source=maps&z=21" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                                    Всеволожский проспект, 17 — Яндекс Карты
+                                </a>
+                                <iframe src="https://yandex.ru/map-widget/v1/?ll=30.646605%2C60.021208&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMTAzNDQxNjAxEnzQoNC-0YHRgdC40Y8sINCb0LXQvdC40L3Qs9GA0LDQtNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQktGB0LXQstC-0LvQvtC20YHQuiwg0JLRgdC10LLQvtC70L7QttGB0LrQuNC5INC_0YDQvtGB0L_QtdC60YIsIDE3IgoN7Sv1QRW2FXBC&z=16" width="100%" height="300" frameborder="1" allowfullscreen="true" style="position:relative;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-60 h20 filter-[brightness(0) invert(1)]">
+                            <img src="raw-assets/logo.svg" alt="Аква Инжиниринг" class="brightness-0 invert">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 mb-2 text-sm md:text-base">© 2026 ООО «АКВА Инжиниринг». Все права защищены.</p>
+                    <p class="text-gray-500 text-xs md:text-sm">ОГРН 1254700009266, ИНН 4704118574</p>
+                </div>
+            </div>
+
+            <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-800 text-center">
+                <div class="flex justify-center space-x-4 md:space-x-6 mb-3 md:mb-4">
+                    <a href="https://wa.me/89390103102" class="text-gray-400 hover:text-green-500 transition duration-300" target="_blank">
+                        <i class="fab fa-whatsapp text-xl md:text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/aquaengspb" class="text-gray-400 hover:text-blue-400 transition duration-300" target="_blank">
+                        <i class="fab fa-telegram text-xl md:text-2xl"></i>
+                    </a>
+                    <a href="mailto:aqua-engspb@yandex.ru" class="text-gray-400 hover:text-red-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl md:text-2xl"></i>
+                    </a>
+                    <a href="tel:+78122182277" class="text-gray-400 hover:text-primary transition duration-300">
+                        <i class="fas fa-phone-alt text-xl md:text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-xs md:text-sm">Свяжитесь с нами для консультации и расчета стоимости работ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.lazyload.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.arrows.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.thumbs.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+        const closeMobileMenuButton = document.getElementById("close-mobile-menu");
+
+        // Open mobile menu
+        mobileMenuButton.addEventListener("click", function() {
+            mobileMenu.classList.add("active");
+            mobileMenuOverlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+
+        // Close mobile menu
+        function closeMobileMenu() {
+            mobileMenu.classList.remove("active");
+            mobileMenuOverlay.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        closeMobileMenuButton.addEventListener("click", closeMobileMenu);
+        mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+
+        // Close mobile menu when clicking on menu links
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", closeMobileMenu);
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape") {
+                closeMobileMenu();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute("href");
+                if (targetId === "#") return;
+
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const header = document.querySelector('header');
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - header.offsetHeight,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        const advantageCards = document.querySelectorAll('[id^="advantage-card"]');
+        const advantageCardDescriptions = document.querySelectorAll('[id^="advantage-description"]');
+
+        advantageCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                advantageCards.forEach(({ classList }) => classList.remove('is-active'));
+                card.classList.add('is-active');
+
+                const cardNumber = card.id.split('-')[2];
+
+                advantageCardDescriptions.forEach(({ classList, id }) => id === `advantage-description-${cardNumber}` ? classList.remove('hidden') : classList.add('hidden'));
+            })
+        })
+
+        const carousels = document.querySelectorAll('[id^="carousel-service"]');
+
+        carousels.forEach((carousel) => {
+            Carousel(
+                carousel,
+                {
+                    Thumbs: {
+                        type: "modern",
+                    },
+                },
+                {
+                    Lazyload,
+                    Arrows,
+                    Thumbs,
+                }
+            ).init();
+        });
+
+        Fancybox.bind("[data-fancybox]", {
+            closeButton: false,
+            closeExisting: true,
+        });
+    </script>
+</body>
+</html>

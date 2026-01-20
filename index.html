@@ -339,6 +339,10 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
+        #services > .container > div:nth-child(even) > .service-background {
+            visibility: hidden;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-montserrat">
@@ -430,16 +434,13 @@
             <div></div>
 
             <div class="max-w-2xl">
-                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white uppercase leading-tight md:leading-tight lg:leading-tight">
+                <h2 class="text-2xl md:text-4xl lg:text-4xl font-bold text-white uppercase leading-tight md:leading-tight lg:leading-tight">
                     Профессиональные строительные и&nbsp;инженерные работы
                 </h2>
                 <p class="text-lg md:text-xl text-white my-6 md:my-8">
-                    Комплексные решения для загородного строительства в&nbsp;Ленинградской области. Работаем во&nbsp;Всеволожске и&nbsp;прилегающих районах с&nbsp;гарантией качества и&nbsp;соблюдением сроков.
+                    Строительство инженерных сетей. Комплексные решения для загородного строительства в&nbsp;Ленинградской области с&nbsp;гарантией качества и&nbsp;соблюдением сроков строительства.
                 </p>
                 <div class="flex flex-wrap gap-3 md:gap-6">
-<!--                    <a href="#contacts" class="bg-white text-primary font-bold px-8 py-4 md:px-12 md:py-6 hover:bg-gray-200 transition duration-300 text-sm md:text-base flex items-center">-->
-<!--                        Связаться с нами-->
-<!--                    </a>-->
                     <a href="#services" class="bg-secondary text-white font-bold px-8 py-4 md:px-16 md:py-5 hover:bg-primary transition duration-300 text-sm md:text-base flex items-center">
                         Наши услуги
                     </a>
@@ -449,11 +450,11 @@
             <!-- Stats -->
             <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-12">
                 <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
-                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">150+</div>
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">350+</div>
                     <div class="text-white text-sm md:text-base">Выполненных проектов</div>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
-                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">5 лет</div>
+                    <div class="text-lg sm:text-2xl md:text-3xl font-bold text-white">7 лет</div>
                     <div class="text-white text-sm md:text-base">Опыта работы</div>
                 </div>
                 <div class="bg-white/20 backdrop-blur-md p-2 sm:p-4 text-center">
@@ -485,14 +486,67 @@
                 <p class="text-gray-600 max-w-2xl text-sm md:text-base">Предоставляем полный комплекс строительных услуг с гарантией качества и соблюдением сроков</p>
             </div>
 
-            <!-- Service 1: Устройство заездов -->
+            <!-- Service 1: Инженерные сети -->
             <div class="py-14 md:py-20 relative">
+                <div class="service-background bg-light"></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
                     <div class="order-last lg:order-first">
-                        <div id="carousel-service-1" class="f-carousel w-full h-64 md:h-80">
-                                <div class="f-carousel__slide" data-src="raw-assets/entryway/driveway.jpg" data-thumb-src="raw-assets/entryway/driveway.jpg" data-fancybox="gallery-1">
-                                    <img data-lazy-src="raw-assets/entryway/driveway.jpg" alt="Устройство бетонного заезда">
+                        <div id="carousel-service-0" class="f-carousel w-full h-64 md:h-80">
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%203.jpeg" data-thumb-src="raw-assets/entryway/заезд%203.jpeg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/заезд%203.jpeg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/driveway.jpg" data-thumb-src="raw-assets/entryway/driveway.jpg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/driveway.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%201.jpeg" data-thumb-src="raw-assets/entryway/заезд%201.jpeg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/заезд%201.jpeg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%202.jpg" data-thumb-src="raw-assets/entryway/заезд%202.jpg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/заезд%202.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%204.jpg" data-thumb-src="raw-assets/entryway/заезд%204.jpg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/заезд%204.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                            <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%205.jpg" data-thumb-src="raw-assets/entryway/заезд%205.jpg" data-fancybox="gallery-0">
+                                <img data-lazy-src="raw-assets/entryway/заезд%205.jpg" alt="Устройство бетонного заезда">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-30">
+                        <div class="flex items-center mb-4">
+                            <div>
+                                <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                    <i class="fas fa-hard-hat text-white text-xl"></i>
                                 </div>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Строительство инженерных сетей</h3>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 text-base md:text-lg">
+                            Комплексный процесс проектирования, строительства, ввода в эксплуатацию инженерных коммуникаций и монтажа сопутствующего оборудования для обеспечения бесперебойной работы и жизнедеятельности коттеджных поселков.
+                        </p>
+
+                        <div class="p-6 border border-[var(--color-primary)]">
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Что мы предлагаем:</h4>
+                            <ul class="service-feature-list space-y-2">
+                                <li class="text-gray-700">Строительство водопроводных коммуникаций</li>
+                                <li class="text-gray-700">Строительство канализационных сетей</li>
+                                <li class="text-gray-700">Монтаж электротехнического оборудования</li>
+                                <li class="text-gray-700">Установка локальных очистных сооружений</li>
+                                <li class="text-gray-700">Монтаж фильтрационного оборудования</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Устройство заездов -->
+            <div class="py-14 md:py-20 relative">
+                <div class="service-background bg-light"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div class="order-last">
+                        <div id="carousel-service-1" class="f-carousel w-full h-64 md:h-80">
                                 <div class="f-carousel__slide" data-src="raw-assets/entryway/заезд%201.jpeg" data-thumb-src="raw-assets/entryway/заезд%201.jpeg" data-fancybox="gallery-1">
                                     <img data-lazy-src="raw-assets/entryway/заезд%201.jpeg" alt="Устройство бетонного заезда">
                                 </div>
@@ -513,8 +567,10 @@
 
                     <div class="relative z-30">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
-                                <i class="fas fa-road text-white text-xl"></i>
+                            <div>
+                                <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                    <i class="fas fa-road text-white text-xl"></i>
+                                </div>
                             </div>
                             <h3 class="text-2xl md:text-3xl font-bold text-dark">Устройство заездов</h3>
                         </div>
@@ -538,11 +594,11 @@
                 </div>
             </div>
 
-            <!-- Service 2: Устройство дренажа -->
+            <!-- Service 3: Устройство дренажа -->
             <div class="py-14 md:py-20 relative">
                 <div class="service-background bg-light"></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                    <div class="order-last">
+                    <div class="order-last lg:order-first">
                         <div id="carousel-service-2" class="f-carousel w-full h-64 md:h-80">
                             <div class="f-carousel__slide" data-src="raw-assets/drainages/drainage.jpg" data-thumb-src="raw-assets/drainages/drainage.jpg" data-fancybox="gallery-2">
                                 <img data-lazy-src="raw-assets/drainages/drainage.jpg" alt="Устройство бетонного заезда">
@@ -561,10 +617,12 @@
 
                     <div class="relative z-30">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
-                                <i class="fas fa-water text-white text-xl"></i>
+                            <div>
+                                <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                    <i class="fas fa-water text-white text-xl"></i>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Устройство дренажа</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Устройство дренажных систем</h3>
                         </div>
 
                         <p class="text-gray-600 mb-6 text-base md:text-lg">
@@ -578,17 +636,18 @@
                                 <li class="text-gray-700">Глубинный дренаж</li>
                                 <li class="text-gray-700">Ливневая канализация</li>
                                 <li class="text-gray-700">Дренаж фундамента</li>
-                                <li class="text-gray-700">Дренажные колодцы</li>
+                                <li class="text-gray-700">Дренажные смотровые колодцы</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 3: Монтаж ЛОС -->
+            <!-- Service 4: Монтаж ЛОС -->
             <div class="py-14 md:py-20 relative">
+                <div class="service-background bg-light"></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                    <div class="order-last lg:order-first">
+                    <div class="order-last">
                         <div id="carousel-service-3" class="f-carousel w-full h-64 md:h-80">
                             <div class="f-carousel__slide" data-src="raw-assets/ISTS/los.png" data-thumb-src="raw-assets/ISTS/los.png" data-fancybox="gallery-3">
                                 <img data-lazy-src="raw-assets/ISTS/los.png" alt="Устройство бетонного заезда">
@@ -604,35 +663,35 @@
 
                     <div class="relative z-30">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
-                                <i class="fas fa-recycle text-white text-xl"></i>
+                            <div>
+                                <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                    <i class="fas fa-recycle text-white text-xl"></i>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Монтаж ЛОС</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Монтаж локальных очистных сооружений</h3>
                         </div>
 
                         <p class="text-gray-600 mb-6 text-base md:text-lg">
-                            Установка локальных очистных сооружений для частных домов и коммерческих объектов.
-                            Мы работаем с различными типами систем очистки сточных вод.
+                            Производим установку локальных очистных сооружений для частных домов и коммерческих объектов.
                         </p>
 
                         <div class="p-6 border border-[var(--color-primary)]">
                             <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Что мы предлагаем:</h4>
                             <ul class="service-feature-list space-y-2">
-                                <li class="text-gray-700">Септики</li>
-                                <li class="text-gray-700">Накопительные и переливные системы</li>
-                                <li class="text-gray-700">Станции биологической очистки</li>
-                                <li class="text-gray-700">Системы доочистки</li>
+                                <li class="text-gray-700">Оказываем полный комплекс услуг по разработке и монтажу локальных очистных сооружений</li>
+                                <li class="text-gray-700">Работаем с различными типами систем очистки сточных&nbsp;вод</li>
+                                <li class="text-gray-700">Являемся официальными дистрибьютерами ведущих производителей систем очистки бытовых и сточных&nbsp;вод</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 4: Заборы ограждения -->
+            <!-- Service 5: Заборы ограждения -->
             <div class="py-14 md:py-20 relative">
                 <div class="service-background bg-light"></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-                    <div class="order-last">
+                    <div class="order-last lg:order-first">
                         <div id="carousel-service-4" class="f-carousel w-full h-64 md:h-80">
                             <div class="f-carousel__slide" data-src="raw-assets/fences/fence.jpg" data-thumb-src="raw-assets/fences/fence.jpg" data-fancybox="gallery-1">
                                 <img data-lazy-src="raw-assets/fences/fence.jpg" alt="Устройство бетонного забора">
@@ -654,10 +713,12 @@
 
                     <div class="relative z-30">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
-                                <i class="fas fa-newspaper text-white text-xl"></i>
+                            <div>
+                                <div class="w-12 h-12 bg-primary flex items-center justify-center mr-4">
+                                    <i class="fas fa-newspaper text-white text-xl"></i>
+                                </div>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Заборы и ограждения</h3>
+                            <h3 class="text-2xl md:text-3xl font-bold text-dark">Заборы и ограждения. Металлоконструкции</h3>
                         </div>
 
                         <p class="text-gray-600 mb-6 text-base md:text-lg">
@@ -666,7 +727,7 @@
                         </p>
 
                         <div class="p-6 border border-[var(--color-primary)]">
-                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Материалы:</h4>
+                            <h4 class="text-lg md:text-xl font-semibold text-dark mb-3">Типы ограждений:</h4>
                             <ul class="service-feature-list space-y-2">
                                 <li class="text-gray-700">Металлические</li>
                                 <li class="text-gray-700">Деревянные</li>
@@ -1048,7 +1109,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-sm md:text-base">Воскресенье</span>
-                                <span class="font-semibold text-sm md:text-base">10:00 - 16:00</span>
+                                <span class="font-semibold text-sm md:text-base">9:00 - 18:00</span>
                             </div>
                         </div>
                     </div>
